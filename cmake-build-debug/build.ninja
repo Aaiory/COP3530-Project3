@@ -63,6 +63,13 @@ build CMakeFiles/COP3530-Project3.dir/Food.cpp.obj: CXX_COMPILER__COP3530-Projec
   OBJECT_DIR = CMakeFiles\COP3530-Project3.dir
   OBJECT_FILE_DIR = CMakeFiles\COP3530-Project3.dir
 
+build CMakeFiles/COP3530-Project3.dir/RBTree.cpp.obj: CXX_COMPILER__COP3530-Project3_Debug C$:/Users/alexi/Documents/GitHub/COP3530-Project3/RBTree.cpp || cmake_object_order_depends_target_COP3530-Project3
+  DEP_FILE = CMakeFiles\COP3530-Project3.dir\RBTree.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+  INCLUDES = -IC:/Users/alexi/Documents/GitHub/COP3530-Project3/.
+  OBJECT_DIR = CMakeFiles\COP3530-Project3.dir
+  OBJECT_FILE_DIR = CMakeFiles\COP3530-Project3.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target COP3530-Project3
@@ -71,7 +78,7 @@ build CMakeFiles/COP3530-Project3.dir/Food.cpp.obj: CXX_COMPILER__COP3530-Projec
 #############################################
 # Link the executable COP3530-Project3.exe
 
-build COP3530-Project3.exe: CXX_EXECUTABLE_LINKER__COP3530-Project3_Debug CMakeFiles/COP3530-Project3.dir/main.cpp.obj CMakeFiles/COP3530-Project3.dir/Food.cpp.obj
+build COP3530-Project3.exe: CXX_EXECUTABLE_LINKER__COP3530-Project3_Debug CMakeFiles/COP3530-Project3.dir/main.cpp.obj CMakeFiles/COP3530-Project3.dir/Food.cpp.obj CMakeFiles/COP3530-Project3.dir/RBTree.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\COP3530-Project3.dir

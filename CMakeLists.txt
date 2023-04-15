@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(COP3530-Project3
-         main.cpp Food.h Food.cpp)
+         main.cpp Food.h Food.cpp RBTree.cpp)
