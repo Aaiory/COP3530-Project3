@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2
+# Install script for directory: C:/Users/alexi/Documents/GitHub/COP3530-Project3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/alexi/Documents/GitHub/COP3530-Project3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

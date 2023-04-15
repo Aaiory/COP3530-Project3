@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2/cmake-build-debug"
+			"value" : "c:/Users/alexi/Documents/GitHub/COP3530-Project3/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2"
+			"value" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Final_Project_2"
+			"value" : "COP3530-Project3"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1254,6 +1254,42 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "COP3530-Project3_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3/cmake-build-debug"
+		},
+		{
+			"name" : "COP3530-Project3_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "COP3530-Project3_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3"
+		},
+		{
 			"name" : "Final_Project_2_BINARY_DIR",
 			"properties" : 
 			[
@@ -1263,7 +1299,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2/cmake-build-debug"
+			"value" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3/cmake-build-debug"
 		},
 		{
 			"name" : "Final_Project_2_IS_TOP_LEVEL",
@@ -1287,7 +1323,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2"
+			"value" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

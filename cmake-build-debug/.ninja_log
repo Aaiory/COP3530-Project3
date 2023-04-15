@@ -1,22 +1,5 @@
 # ninja log v5
-4	434	7032243547154542	CMakeFiles/Final_Project_2.dir/hashtable.cpp.obj	f51d2e7b05c197df
-2	375	7032247950122825	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-375	475	7032247951107991	Final_Project_2.exe	695ca13b994b91c0
-6	56	7032274517524293	CMakeFiles/Final_Project_2.dir/hashtable.cpp.obj	f51d2e7b05c197df
-2	376	7032274520704204	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-9	376	7032274520714193	CMakeFiles/Final_Project_2.dir/Food.cpp.obj	73f0e6b9519d49c9
-377	482	7032274521749674	Final_Project_2.exe	65d8cf1512369c0d
-9	416	7032334630186186	CMakeFiles/Final_Project_2.dir/Food.cpp.obj	73f0e6b9519d49c9
-2	464	7032334630666226	CMakeFiles/Final_Project_2.dir/hashtable.cpp.obj	f51d2e7b05c197df
-3	461	7032336199468674	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-462	580	7032336200622738	Final_Project_2.exe	65d8cf1512369c0d
-2	421	7032340656704159	CMakeFiles/Final_Project_2.dir/hashtable.cpp.obj	f51d2e7b05c197df
-6	477	7032340657265728	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-477	583	7032340658311193	Final_Project_2.exe	65d8cf1512369c0d
-3	489	7032342985741630	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-490	583	7032342986647373	Final_Project_2.exe	65d8cf1512369c0d
-2	485	7032343654904906	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-485	579	7032343655825175	Final_Project_2.exe	65d8cf1512369c0d
-3	442	7032354564571309	CMakeFiles/Final_Project_2.dir/main.cpp.obj	3f022bc19e170c59
-7	444	7032354564581168	CMakeFiles/Final_Project_2.dir/hashtable.cpp.obj	f51d2e7b05c197df
 444	538	7032354565491231	Final_Project_2.exe	65d8cf1512369c0d
+4	413	7032941658993458	CMakeFiles/COP3530-Project3.dir/Food.cpp.obj	27ff5780195c6753
+0	457	7032941659438856	CMakeFiles/COP3530-Project3.dir/main.cpp.obj	388712b319ddb1d
+457	576	7032941660600622	COP3530-Project3.exe	50abde6dffb340f6

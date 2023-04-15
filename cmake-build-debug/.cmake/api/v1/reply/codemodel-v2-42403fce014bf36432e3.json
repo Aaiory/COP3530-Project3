@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Final_Project_2",
+					"name" : "COP3530-Project3",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Final_Project_2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Final_Project_2-Debug-6fef2263e1cec6679933.json",
-					"name" : "Final_Project_2",
+					"id" : "COP3530-Project3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-COP3530-Project3-Debug-f3086fe961fbb1cbf737.json",
+					"name" : "COP3530-Project3",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2/cmake-build-debug",
-		"source" : "C:/Users/alexi/OneDrive - University of Florida/Data Structures_Algorithms COP3530/Final Project 2"
+		"build" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3/cmake-build-debug",
+		"source" : "C:/Users/alexi/Documents/GitHub/COP3530-Project3"
 	},
 	"version" : 
 	{
