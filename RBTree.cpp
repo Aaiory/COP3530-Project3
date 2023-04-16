@@ -227,31 +227,41 @@ RBTree::Node *RBTree::findNode(Node* x, const std::string& category) {
     }
 }
 
-void RBTree::remove(const std::string& category) {
-    Node* z = searchHelper(category, root);
-    if (z == nullptr) {
+std::vector<Food> RBTree::search(const std::string& category) {
+    std::vector<Food> results;
+    searchHelper(category, root, results);
+    return results;
+}
+
+void RBTree::searchHelper(const std::string& category, Node* x, std::vector<Food>& results) {
+    if (x == nullptr) {
         return;
     }
-    deleteNode(z);
+    if (category < x->data.getCategory()) {
+        searchHelper(category, x->left, results);
+    } else if (category > x->data.getCategory()) {
+        searchHelper(category, x->right, results);
+    } else {
+        // We found a node with the matching category key, so add its food item to the results vector
+        results.push_back(x->data);
+        // Recursively search the left and right subtrees for additional matching nodes
+        searchHelper(category, x->left, results);
+        searchHelper(category, x->right, results);
+    }
 }
 
-Food* RBTree::search(const std::string& category) {
-    Node* z = searchHelper(category, root);
-    if (z == nullptr) {
-        return nullptr;
+
+void RBTree::uniqueKeysHelper(RBTree::Node *x, std::set<std::string> &keys) {
+    if (x == nullptr) {
+        return;
     }
-    return &(z->data);
+    uniqueKeysHelper(x->left, keys);
+    keys.insert(x->data.getCategory());
+    uniqueKeysHelper(x->right, keys);
 }
 
-RBTree::Node* RBTree::searchHelper(const std::string& category, Node* x) {
-    while (x != nullptr) {
-        if (category < x->data.getCategory()) {
-            x = x->left;
-        } else if (category > x->data.getCategory()) {
-            x = x->right;
-        } else {
-            return x;
-        }
-    }
-    return nullptr;
+std::set<std::string> RBTree::uniqueKeys() {
+    std::set<std::string> keys;
+    uniqueKeysHelper(root, keys);
+    return keys;
 }

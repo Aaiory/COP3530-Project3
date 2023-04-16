@@ -16,9 +16,9 @@ int main() {
 
     // Test search function
     std::cout << "Search results:" << std::endl;
-    std::cout << "Milk: " << tree.search("Milk")->getDescription() << std::endl;
-    std::cout << "Yogurt: " << tree.search("Yogurt")->getDescription() << std::endl;
-    std::cout << "Pudding: " << tree.search("Pudding")->getDescription() << std::endl;
+    std::cout << "Milk: " << tree.search("Milk").size() << std::endl;
+    std::cout << "Yogurt: " << tree.search("Yogurt").size() << std::endl;
+    std::cout << "Pudding: " << tree.search("Pudding").size() << std::endl;
 
     return 0;
 }
