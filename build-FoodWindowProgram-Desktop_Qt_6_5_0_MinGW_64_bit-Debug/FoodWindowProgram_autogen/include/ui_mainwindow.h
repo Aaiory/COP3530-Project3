@@ -59,6 +59,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(selectCategoryDropDown->sizePolicy().hasHeightForWidth());
         selectCategoryDropDown->setSizePolicy(sizePolicy1);
+        selectCategoryDropDown->setCursor(QCursor(Qt::PointingHandCursor));
         selectCategoryDropDown->setEditable(true);
         selectCategoryDropDown->setInsertPolicy(QComboBox::InsertAlphabetically);
 
@@ -68,6 +69,7 @@ public:
         sortByDropDown->setObjectName("sortByDropDown");
         sizePolicy1.setHeightForWidth(sortByDropDown->sizePolicy().hasHeightForWidth());
         sortByDropDown->setSizePolicy(sizePolicy1);
+        sortByDropDown->setCursor(QCursor(Qt::PointingHandCursor));
         sortByDropDown->setEditable(true);
 
         horizontalLayout_3->addWidget(sortByDropDown);
