@@ -3,6 +3,7 @@
 
 FoodFinder::FoodFinder(std::string filename)
 {
+    this->map = map;
     std::string fileName = "food.csv"; // File name
     std::vector<Food> foods = loadFromFile(filename); // vector to hold all Food instances
 
@@ -11,6 +12,14 @@ FoodFinder::FoodFinder(std::string filename)
         tree.insert(food);
         map.insertFood(food);
     }
+}
+
+//Insert Function
+
+void FoodFinder::insert(Food food)
+{
+    tree.insert(food);
+    map.insertFood(food);
 }
 
 
@@ -53,7 +62,7 @@ bool FoodFinder::sortVitC(Food a, Food b) { return (a.getVitaminC() > b.getVitam
 bool FoodFinder::sortVitE(Food a, Food b) { return (a.getVitaminE() > b.getVitaminE()); }
 bool FoodFinder::sortVitK(Food a, Food b) { return (a.getVitaminK() > b.getVitaminK()); }
 
-void sortNutrient(std::vector<Food>& result, std::string nutrient)
+void FoodFinder::sortNutrient(std::vector<Food>& result, std::string nutrition)
 {
     if(nutrition == "ndbNumber")
         sort(result.begin(), result.end(), sortNdbsNumber);
@@ -133,12 +142,12 @@ void sortNutrient(std::vector<Food>& result, std::string nutrient)
 
 //Search Functions
 
-std::vector <Food> FoodFinder::searchMap(std::string category)
+std::vector<Food> FoodFinder::searchMap(std::string category)
 {
     return map.search(category);
 }
 
-std::vector <Food> FoodFinder::searchTree(std::string category)
+std::vector<Food> FoodFinder::searchTree(std::string category)
 {
     return tree.search(category);
 }
@@ -146,7 +155,7 @@ std::vector <Food> FoodFinder::searchTree(std::string category)
 
 std::vector<Food> FoodFinder::searchMapNutrientDesc(std::string category, std::string nutrition)
 {
-    std::vector result = map.search(category);
+    std::vector<Food> result = map.search(category);
     FoodFinder::sortNutrient(result, nutrition);
     return result;
 }
@@ -161,7 +170,7 @@ std::vector<Food> FoodFinder::searchMapNutrientAsc(std::string category, std::st
 
 std::vector<Food> FoodFinder::searchTreeNutrientDesc(std::string category, std::string nutrition)
 {
-    std::vector result = tree.search(category);
+    std::vector<Food> result = tree.search(category);
     FoodFinder::sortNutrient(result, nutrition);
     return result;
 }
