@@ -90,6 +90,12 @@
 		<Unit filename="C:/Users/alexi/Documents/GitHub/COP3530-Project3/Food.h">
 			<Option target="COP3530-Project3"/>
 		</Unit>
+		<Unit filename="C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodFinder.cpp">
+			<Option target="COP3530-Project3"/>
+		</Unit>
+		<Unit filename="C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodFinder.h">
+			<Option target="COP3530-Project3"/>
+		</Unit>
 		<Unit filename="C:/Users/alexi/Documents/GitHub/COP3530-Project3/HMap.cpp">
 			<Option target="COP3530-Project3"/>
 		</Unit>

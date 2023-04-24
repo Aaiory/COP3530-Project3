@@ -152,6 +152,30 @@ Food.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/Food.cpp.s
 .PHONY : Food.cpp.s
 
+FoodFinder.obj: FoodFinder.cpp.obj
+.PHONY : FoodFinder.obj
+
+# target to build an object file
+FoodFinder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/FoodFinder.cpp.obj
+.PHONY : FoodFinder.cpp.obj
+
+FoodFinder.i: FoodFinder.cpp.i
+.PHONY : FoodFinder.i
+
+# target to preprocess a source file
+FoodFinder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/FoodFinder.cpp.i
+.PHONY : FoodFinder.cpp.i
+
+FoodFinder.s: FoodFinder.cpp.s
+.PHONY : FoodFinder.s
+
+# target to generate assembly for a file
+FoodFinder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/FoodFinder.cpp.s
+.PHONY : FoodFinder.cpp.s
+
 HMap.obj: HMap.cpp.obj
 .PHONY : HMap.obj
 
@@ -236,6 +260,9 @@ help:
 	@echo ... Food.obj
 	@echo ... Food.i
 	@echo ... Food.s
+	@echo ... FoodFinder.obj
+	@echo ... FoodFinder.i
+	@echo ... FoodFinder.s
 	@echo ... HMap.obj
 	@echo ... HMap.i
 	@echo ... HMap.s
