@@ -6,13 +6,7 @@ class FoodFinder
 {
     //Comparable Structures
     RBTree tree;
-    FoodMap map(10, 0.5); //Max Load Factor = 0.5
-
-    //Constructor
-    FoodFinder(std::string filename);
-
-    //Insert Function
-    insert(Food food);
+    FoodMap map = FoodMap(10, 0.5);
 
     //Sort Comparators, will be used with the standard sort function to sort according to nutrient values
     static bool sortNdbsNumber(Food a, Food b);
@@ -52,8 +46,16 @@ class FoodFinder
     static bool sortVitE(Food a, Food b);
     static bool sortVitK(Food a, Food b);
 
+public:
+
+    //Constructor
+    FoodFinder(std::string filename);
+
+    //Insert Function
+    void insert(Food food);
+
     //Sort Function
-    void sortNutrient(std::vector<Food>& result, std::string nutrient) //sorts in descending order by nutrient
+    void sortNutrient(std::vector<Food>& result, std::string nutrition); //sorts in descending order by nutrient
 
     //Search Functions
     std::vector<Food> searchMap(std::string category);
