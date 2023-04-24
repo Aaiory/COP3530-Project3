@@ -21,11 +21,11 @@ int main() {
     std::cout << "Yogurt: " << foodFinder.searchMap("Yogurt").size() << std::endl;
     std::cout << "Pudding: " << foodFinder.searchMap("Pudding").size() << std::endl;
 
-    std::cout << "Milk sorted according to Protein, ascending:" << std::endl;
-    std::vector<Food> s = foodFinder.searchMapNutrientAsc("Milk", "protein");
+    std::cout << "Milk according to Protein :";
+    std::vector<Food> s = foodFinder.searchMapNutrientDesc("Milk", "protein");
     for(Food f : s)
     {
-        std::cout << f.getDescription() << ": " << f.getProtein() << std::endl;
+        std::cout << f.getProtein() << " ";
     }
 
     /*
