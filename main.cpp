@@ -29,6 +29,13 @@ int main() {
     std::cout << "Yogurt: " << map.search("Yogurt").size() << std::endl;
     std::cout << "Pudding: " << map.search("Pudding").size() << std::endl;
 
+    std::cout << "Milk according to Protein :";
+    std::vector<Food> s = map.search("Milk", "protein");
+    for(Food f : s)
+    {
+        std::cout << f.getProtein() << " ";
+    }
+
     /*
     std::vector<std::string> headers = loadHeadersFromFile("food.csv");
     for(auto header : headers){
