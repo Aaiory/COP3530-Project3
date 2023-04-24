@@ -4,33 +4,25 @@
 #include "Food.h"
 #include "RBTree.h"
 #include "HMap.h"
+#include "FoodFinder.h"
 
 int main() {
-    std::string fileName = "food.csv"; // File name
-    std::vector<Food> foods = loadFromFile(fileName); // vector to hold all Food instances
-
-    RBTree tree;
-    FoodMap map(10, 0.5);
-
-    for (const auto& food : foods) {
-        tree.insert(food);
-        map.insertFood(food);
-    }
+    FoodFinder foodFinder("food.csv");
 
     // Test search function (RBT)
     std::cout << "Search results (RB Tree):" << std::endl;
-    std::cout << "Milk: " << tree.search("Milk").size() << std::endl;
-    std::cout << "Yogurt: " << tree.search("Yogurt").size() << std::endl;
-    std::cout << "Pudding: " << tree.search("Pudding").size() << std::endl;
+    std::cout << "Milk: " << foodFinder.searchTree("Milk").size() << std::endl;
+    std::cout << "Yogurt: " << foodFinder.searchTree("Yogurt").size() << std::endl;
+    std::cout << "Pudding: " << foodFinder.searchTree("Pudding").size() << std::endl;
 
     // Test search function (HMap)
     std::cout << "Search results (HMap):" << std::endl;
-    std::cout << "Milk: " << map.search("Milk").size() << std::endl;
-    std::cout << "Yogurt: " << map.search("Yogurt").size() << std::endl;
-    std::cout << "Pudding: " << map.search("Pudding").size() << std::endl;
+    std::cout << "Milk: " << foodFinder.searchMap("Milk").size() << std::endl;
+    std::cout << "Yogurt: " << foodFinder.searchMap("Yogurt").size() << std::endl;
+    std::cout << "Pudding: " << foodFinder.searchMap("Pudding").size() << std::endl;
 
     std::cout << "Milk according to Protein :";
-    std::vector<Food> s = map.search("Milk", "protein");
+    std::vector<Food> s = foodFinder.searchMapNutrientDesc("Milk", "protein");
     for(Food f : s)
     {
         std::cout << f.getProtein() << " ";
