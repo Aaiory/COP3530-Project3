@@ -152,6 +152,30 @@ Food.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/Food.cpp.s
 .PHONY : Food.cpp.s
 
+HMap.obj: HMap.cpp.obj
+.PHONY : HMap.obj
+
+# target to build an object file
+HMap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/HMap.cpp.obj
+.PHONY : HMap.cpp.obj
+
+HMap.i: HMap.cpp.i
+.PHONY : HMap.i
+
+# target to preprocess a source file
+HMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/HMap.cpp.i
+.PHONY : HMap.cpp.i
+
+HMap.s: HMap.cpp.s
+.PHONY : HMap.s
+
+# target to generate assembly for a file
+HMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\COP3530-Project3.dir\build.make CMakeFiles/COP3530-Project3.dir/HMap.cpp.s
+.PHONY : HMap.cpp.s
+
 RBTree.obj: RBTree.cpp.obj
 .PHONY : RBTree.obj
 
@@ -212,6 +236,9 @@ help:
 	@echo ... Food.obj
 	@echo ... Food.i
 	@echo ... Food.s
+	@echo ... HMap.obj
+	@echo ... HMap.i
+	@echo ... HMap.s
 	@echo ... RBTree.obj
 	@echo ... RBTree.i
 	@echo ... RBTree.s

@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui -> sortByDropDown -> addItem(QString::fromStdString(category));
     }
 
+
 }
 
 MainWindow::~MainWindow()

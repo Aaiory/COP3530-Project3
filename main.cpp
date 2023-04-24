@@ -38,7 +38,7 @@ int main() {
 
     /*
     std::vector<std::string> headers = loadHeadersFromFile("food.csv");
-    for(auto header : headers){
+    for(const auto& header : headers){
         std::cout << header << " ";
     }
     std::cout << "\nHeader Count: " << headers.size() << std::endl;*/
