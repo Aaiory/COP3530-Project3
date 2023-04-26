@@ -23,17 +23,11 @@ int main() {
 
     std::cout << "Milk sorted according to Protein, ascending:" << std::endl;
     std::vector<Food> s = foodFinder.searchMapNutrientAsc("Milk", "protein");
-    for(Food f : s)
+    for(const Food& f : s)
     {
         std::cout << f.getDescription() << ": " << f.getProtein() << std::endl;
     }
 
-    /*
-    std::vector<std::string> headers = loadHeadersFromFile("food.csv");
-    for(const auto& header : headers){
-        std::cout << header << " ";
-    }
-    std::cout << "\nHeader Count: " << headers.size() << std::endl;*/
     return 0;
 }
 

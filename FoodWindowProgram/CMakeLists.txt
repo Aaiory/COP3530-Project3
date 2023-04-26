@@ -21,6 +21,10 @@ set(PROJECT_SOURCES
         ../Food.cpp
         ../RBTree.h
         ../RBTree.cpp
+        ../HMap.h
+        ../HMap.cpp
+        ../FoodFinder.h
+        ../FoodFinder.cpp
         ../food.csv
 )
 

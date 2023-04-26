@@ -261,9 +261,21 @@
 			null
 		],
 		[
+			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodFinder.h",
+			"MU",
+			"YRCE6BZC6F/moc_FoodFinder.cpp",
+			null
+		],
+		[
 			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodWindowProgram/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/HMap.h",
+			"MU",
+			"YRCE6BZC6F/moc_HMap.cpp",
 			null
 		],
 		[
@@ -348,12 +360,22 @@
 			null
 		],
 		[
+			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodFinder.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodWindowProgram/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/FoodWindowProgram/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/alexi/Documents/GitHub/COP3530-Project3/HMap.cpp",
 			"MU",
 			null
 		],

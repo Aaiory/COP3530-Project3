@@ -9,61 +9,61 @@ class FoodFinder
     FoodMap map = FoodMap(10, 0.5);
 
     //Sort Comparators, will be used with the standard sort function to sort according to nutrient values
-    static bool sortNdbsNumber(Food a, Food b);
-    static bool sortAlphaCarotene(Food a, Food b);
-    static bool sortBetaCarotene(Food a, Food b);
-    static bool sortBetaCryptoxanthin(Food a, Food b);
-    static bool sortCarbohydrate(Food a, Food b);
-    static bool sortCholesterol(Food a, Food b);
-    static bool sortCholine(Food a, Food b);
-    static bool sortFiber(Food a, Food b);
-    static bool sortLuteinZeaxanthin(Food a, Food b);
-    static bool sortLycopene(Food a, Food b);
-    static bool sortNiacin(Food a, Food b);
-    static bool sortProtein(Food a, Food b);
-    static bool sortRetinol(Food a, Food b);
-    static bool sortRiboflavin(Food a, Food b);
-    static bool sortSelenium(Food a, Food b);
-    static bool sortSugarTotal(Food a, Food b);
-    static bool sortThiamin(Food a, Food b);
-    static bool sortWater(Food a, Food b);
-    static bool sortMonoFat(Food a, Food b);
-    static bool sortPolyFat(Food a, Food b);
-    static bool sortSatFat(Food a, Food b);
-    static bool sortTotalFat(Food a, Food b);
-    static bool sortCalcium(Food a, Food b);
-    static bool sortCopper(Food a, Food b);
-    static bool sortIron(Food a, Food b);
-    static bool sortMagnesium(Food a, Food b);
-    static bool sortPhosphorus(Food a, Food b);
-    static bool sortPotassium(Food a, Food b);
-    static bool sortSodium(Food a, Food b);
-    static bool sortZinc(Food a, Food b);
-    static bool sortVitARAE(Food a, Food b);
-    static bool sortVitB12(Food a, Food b);
-    static bool sortVitB6(Food a, Food b);
-    static bool sortVitC(Food a, Food b);
-    static bool sortVitE(Food a, Food b);
-    static bool sortVitK(Food a, Food b);
+    static bool sortNdbsNumber(const Food& a, const Food& b);
+    static bool sortAlphaCarotene(const Food& a, const Food& b);
+    static bool sortBetaCarotene(const Food& a, const Food& b);
+    static bool sortBetaCryptoxanthin(const Food& a, const Food& b);
+    static bool sortCarbohydrate(const Food& a, const Food& b);
+    static bool sortCholesterol(const Food& a, const Food& b);
+    static bool sortCholine(const Food& a, const Food& b);
+    static bool sortFiber(const Food& a, const Food& b);
+    static bool sortLuteinZeaxanthin(const Food& a, const Food& b);
+    static bool sortLycopene(const Food& a, const Food& b);
+    static bool sortNiacin(const Food& a, const Food& b);
+    static bool sortProtein(const Food& a, const Food& b);
+    static bool sortRetinol(const Food& a, const Food& b);
+    static bool sortRiboflavin(const Food& a, const Food& b);
+    static bool sortSelenium(const Food& a, const Food& b);
+    static bool sortSugarTotal(const Food& a, const Food& b);
+    static bool sortThiamin(const Food& a, const Food& b);
+    static bool sortWater(const Food& a, const Food& b);
+    static bool sortMonoFat(const Food& a, const Food& b);
+    static bool sortPolyFat(const Food& a, const Food& b);
+    static bool sortSatFat(const Food& a, const Food& b);
+    static bool sortTotalFat(const Food& a, const Food& b);
+    static bool sortCalcium(const Food& a, const Food& b);
+    static bool sortCopper(const Food& a, const Food& b);
+    static bool sortIron(const Food& a, const Food& b);
+    static bool sortMagnesium(const Food& a, const Food& b);
+    static bool sortPhosphorus(const Food& a, const Food& b);
+    static bool sortPotassium(const Food& a, const Food& b);
+    static bool sortSodium(const Food& a, const Food& b);
+    static bool sortZinc(const Food& a, const Food& b);
+    static bool sortVitARAE(const Food& a, const Food& b);
+    static bool sortVitB12(const Food& a, const Food& b);
+    static bool sortVitB6(const Food& a, const Food& b);
+    static bool sortVitC(const Food& a, const Food& b);
+    static bool sortVitE(const Food& a, const Food& b);
+    static bool sortVitK(const Food& a, const Food& b);
 
 public:
 
     //Constructor
-    FoodFinder(std::string filename);
+    explicit FoodFinder(const std::string& filename);
 
     //Insert Function
-    void insert(Food food);
+    void insert(const Food& food);
 
     //Sort Function
-    void sortNutrient(std::vector<Food>& result, std::string nutrition); //sorts in descending order by nutrient
+    void sortNutrient(std::vector<Food>& result, const std::string& nutrition); //sorts in descending order by nutrient
 
     //Search Functions
     std::vector<Food> searchMap(std::string category);
-    std::vector<Food> searchTree(std::string category);
-    std::vector<Food> searchMapNutrientDesc(std::string category, std::string nutrition);
-    std::vector<Food> searchMapNutrientAsc(std::string category, std::string nutrition);
-    std::vector<Food> searchTreeNutrientDesc(std::string category, std::string nutrition);
-    std::vector<Food> searchTreeNutrientAsc(std::string category, std::string nutrition);
+    std::vector<Food> searchTree(const std::string& category);
+    std::vector<Food> searchMapNutrientDesc(std::string category, const std::string& nutrition);
+    std::vector<Food> searchMapNutrientAsc(std::string category, const std::string& nutrition);
+    std::vector<Food> searchTreeNutrientDesc(const std::string& category, const std::string& nutrition);
+    std::vector<Food> searchTreeNutrientAsc(const std::string& category, const std::string& nutrition);
 
 
 

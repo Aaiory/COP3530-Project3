@@ -103,7 +103,7 @@ std::vector<Food> FoodMap::search(std::string category)
     std::vector<Food> vec;
     int index = hashFunction(category);
     std::vector<FoodCategory>& row = foodmap[index];
-    for(FoodCategory cat : row)
+    for(const FoodCategory& cat : row)
     {
         if(cat.name == category)
             vec = cat.foodstuffs;

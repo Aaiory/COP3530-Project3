@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-87e075698af8124532c8.json",
+					"jsonFile" : "directory-.-Debug-f8042c6196f3bf60caff.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "FoodWindowProgram::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-FoodWindowProgram-Debug-5cb5f3b430df0a0aa704.json",
+					"jsonFile" : "target-FoodWindowProgram-Debug-c47cd5fe45ec56770b16.json",
 					"name" : "FoodWindowProgram",
 					"projectIndex" : 0
 				},

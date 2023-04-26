@@ -1,7 +1,9 @@
 
 #include "FoodFinder.h"
 
-FoodFinder::FoodFinder(std::string filename)
+#include <utility>
+
+FoodFinder::FoodFinder(const std::string& filename)
 {
     this->map = map;
     std::string fileName = "food.csv"; // File name
@@ -16,7 +18,7 @@ FoodFinder::FoodFinder(std::string filename)
 
 //Insert Function
 
-void FoodFinder::insert(Food food)
+void FoodFinder::insert(const Food& food)
 {
     tree.insert(food);
     map.insertFood(food);
@@ -25,118 +27,117 @@ void FoodFinder::insert(Food food)
 
 //Sorting Functions
 
-bool FoodFinder::sortNdbsNumber(Food a, Food b) { return (a.getNdbsNumber() > b.getNdbsNumber()); }
-bool FoodFinder::sortAlphaCarotene(Food a, Food b) { return (a.getAlphaCarotene() > b.getAlphaCarotene()); }
-bool FoodFinder::sortBetaCarotene(Food a, Food b) { return (a.getBetaCarotene() > b.getBetaCarotene()); }
-bool FoodFinder::sortBetaCryptoxanthin(Food a, Food b) { return (a.getBetaCryptoxanthin() > b.getBetaCryptoxanthin()); }
-bool FoodFinder::sortCarbohydrate(Food a, Food b) { return (a.getCarbohydrate() > b.getCarbohydrate()); }
-bool FoodFinder::sortCholesterol(Food a, Food b) { return (a.getCholesterol() > b.getCholesterol()); }
-bool FoodFinder::sortCholine(Food a, Food b) { return (a.getCholine() > b.getCholine()); }
-bool FoodFinder::sortFiber(Food a, Food b) { return (a.getFiber() > b.getFiber()); }
-bool FoodFinder::sortLuteinZeaxanthin(Food a, Food b) { return (a.getLuteinZeaxanthin() > b.getLuteinZeaxanthin()); }
-bool FoodFinder::sortLycopene(Food a, Food b) { return (a.getLycopene() > b.getLycopene()); }
-bool FoodFinder::sortNiacin(Food a, Food b) { return (a.getNiacin() > b.getNiacin()); }
-bool FoodFinder::sortProtein(Food a, Food b) { return (a.getProtein() > b.getProtein()); }
-bool FoodFinder::sortRetinol(Food a, Food b) { return (a.getRetinol() > b.getRetinol()); }
-bool FoodFinder::sortRiboflavin(Food a, Food b) { return (a.getRiboflavin() > b.getRiboflavin()); }
-bool FoodFinder::sortSelenium(Food a, Food b) { return (a.getSelenium() > b.getSelenium()); }
-bool FoodFinder::sortSugarTotal(Food a, Food b) { return (a.getSugarTotal() > b.getSugarTotal()); }
-bool FoodFinder::sortThiamin(Food a, Food b) { return (a.getThiamin() > b.getThiamin()); }
-bool FoodFinder::sortWater(Food a, Food b) { return (a.getWater() > b.getWater()); }
-bool FoodFinder::sortMonoFat(Food a, Food b) { return (a.getMonoFat() > b.getMonoFat()); }
-bool FoodFinder::sortPolyFat(Food a, Food b) { return (a.getPolyFat() > b.getPolyFat()); }
-bool FoodFinder::sortSatFat(Food a, Food b) { return (a.getSatFat() > b.getSatFat()); }
-bool FoodFinder::sortTotalFat(Food a, Food b) { return (a.getTotalFat() > b.getTotalFat()); }
-bool FoodFinder::sortCalcium(Food a, Food b) { return (a.getCalcium() > b.getCalcium()); }
-bool FoodFinder::sortCopper(Food a, Food b) { return (a.getCopper() > b.getCopper()); }
-bool FoodFinder::sortIron(Food a, Food b){return (a.getIron() > b.getIron());}
-bool FoodFinder::sortMagnesium(Food a, Food b) { return (a.getMagnesium() > b.getMagnesium()); }
-bool FoodFinder::sortPhosphorus(Food a, Food b) { return (a.getPhosphorus() > b.getPhosphorus()); }
-bool FoodFinder::sortPotassium(Food a, Food b) { return (a.getPotassium() > b.getPotassium()); }
-bool FoodFinder::sortSodium(Food a, Food b) { return (a.getSodium() > b.getSodium()); }
-bool FoodFinder::sortZinc(Food a, Food b) { return (a.getZinc() > b.getZinc()); }
-bool FoodFinder::sortVitARAE(Food a, Food b) { return (a.getVitaminARAE() > b.getVitaminARAE()); }
-bool FoodFinder::sortVitB12(Food a, Food b) { return (a.getVitaminB12() > b.getVitaminB12()); }
-bool FoodFinder::sortVitB6(Food a, Food b) { return (a.getVitaminB6() > b.getVitaminB6()); }
-bool FoodFinder::sortVitC(Food a, Food b) { return (a.getVitaminC() > b.getVitaminC()); }
-bool FoodFinder::sortVitE(Food a, Food b) { return (a.getVitaminE() > b.getVitaminE()); }
-bool FoodFinder::sortVitK(Food a, Food b) { return (a.getVitaminK() > b.getVitaminK()); }
+bool FoodFinder::sortNdbsNumber(const Food& a, const Food& b) { return (a.getNdbsNumber() > b.getNdbsNumber()); }
+bool FoodFinder::sortAlphaCarotene(const Food& a, const Food& b) { return (a.getAlphaCarotene() > b.getAlphaCarotene()); }
+bool FoodFinder::sortBetaCarotene(const Food& a, const Food& b) { return (a.getBetaCarotene() > b.getBetaCarotene()); }
+bool FoodFinder::sortBetaCryptoxanthin(const Food& a, const Food& b) { return (a.getBetaCryptoxanthin() > b.getBetaCryptoxanthin()); }
+bool FoodFinder::sortCarbohydrate(const Food& a, const Food& b) { return (a.getCarbohydrate() > b.getCarbohydrate()); }
+bool FoodFinder::sortCholesterol(const Food& a, const Food& b) { return (a.getCholesterol() > b.getCholesterol()); }
+bool FoodFinder::sortCholine(const Food& a, const Food& b) { return (a.getCholine() > b.getCholine()); }
+bool FoodFinder::sortFiber(const Food& a, const Food& b) { return (a.getFiber() > b.getFiber()); }
+bool FoodFinder::sortLuteinZeaxanthin(const Food& a, const Food& b) { return (a.getLuteinZeaxanthin() > b.getLuteinZeaxanthin()); }
+bool FoodFinder::sortLycopene(const Food& a, const Food& b) { return (a.getLycopene() > b.getLycopene()); }
+bool FoodFinder::sortNiacin(const Food& a, const Food& b) { return (a.getNiacin() > b.getNiacin()); }
+bool FoodFinder::sortProtein(const Food& a, const Food& b) { return (a.getProtein() > b.getProtein()); }
+bool FoodFinder::sortRetinol(const Food& a, const Food& b) { return (a.getRetinol() > b.getRetinol()); }
+bool FoodFinder::sortRiboflavin(const Food& a, const Food& b) { return (a.getRiboflavin() > b.getRiboflavin()); }
+bool FoodFinder::sortSelenium(const Food& a, const Food& b) { return (a.getSelenium() > b.getSelenium()); }
+bool FoodFinder::sortSugarTotal(const Food& a, const Food& b) { return (a.getSugarTotal() > b.getSugarTotal()); }
+bool FoodFinder::sortThiamin(const Food& a, const Food& b) { return (a.getThiamin() > b.getThiamin()); }
+bool FoodFinder::sortWater(const Food& a, const Food& b) { return (a.getWater() > b.getWater()); }
+bool FoodFinder::sortMonoFat(const Food& a, const Food& b) { return (a.getMonoFat() > b.getMonoFat()); }
+bool FoodFinder::sortPolyFat(const Food& a, const Food& b) { return (a.getPolyFat() > b.getPolyFat()); }
+bool FoodFinder::sortSatFat(const Food& a, const Food& b) { return (a.getSatFat() > b.getSatFat()); }
+bool FoodFinder::sortTotalFat(const Food& a, const Food& b) { return (a.getTotalFat() > b.getTotalFat()); }
+bool FoodFinder::sortCalcium(const Food& a, const Food& b) { return (a.getCalcium() > b.getCalcium()); }
+bool FoodFinder::sortCopper(const Food& a, const Food& b) { return (a.getCopper() > b.getCopper()); }
+bool FoodFinder::sortIron(const Food& a, const Food& b){return (a.getIron() > b.getIron());}
+bool FoodFinder::sortMagnesium(const Food& a, const Food& b) { return (a.getMagnesium() > b.getMagnesium()); }
+bool FoodFinder::sortPhosphorus(const Food& a, const Food& b) { return (a.getPhosphorus() > b.getPhosphorus()); }
+bool FoodFinder::sortPotassium(const Food& a, const Food& b) { return (a.getPotassium() > b.getPotassium()); }
+bool FoodFinder::sortSodium(const Food& a, const Food& b) { return (a.getSodium() > b.getSodium()); }
+bool FoodFinder::sortZinc(const Food& a, const Food& b) { return (a.getZinc() > b.getZinc()); }
+bool FoodFinder::sortVitARAE(const Food& a, const Food& b) { return (a.getVitaminARAE() > b.getVitaminARAE()); }
+bool FoodFinder::sortVitB12(const Food& a, const Food& b) { return (a.getVitaminB12() > b.getVitaminB12()); }
+bool FoodFinder::sortVitB6(const Food& a, const Food& b) { return (a.getVitaminB6() > b.getVitaminB6()); }
+bool FoodFinder::sortVitC(const Food& a, const Food& b) { return (a.getVitaminC() > b.getVitaminC()); }
+bool FoodFinder::sortVitE(const Food& a, const Food& b) { return (a.getVitaminE() > b.getVitaminE()); }
+bool FoodFinder::sortVitK(const Food& a, const Food& b) { return (a.getVitaminK() > b.getVitaminK()); }
 
-void FoodFinder::sortNutrient(std::vector<Food>& result, std::string nutrition)
+void FoodFinder::sortNutrient(std::vector<Food>& result, const std::string& nutrition)
 {
-    if(nutrition == "ndbNumber")
+    if(nutrition == "Nutrient Data Bank Number")
         sort(result.begin(), result.end(), sortNdbsNumber);
-    else if(nutrition == "alphaCarotene")
+    else if(nutrition == "Alpha Carotene")
         sort(result.begin(), result.end(), sortAlphaCarotene);
-    else if(nutrition == "betaCarotene")
+    else if(nutrition == "Beta Carotene")
         sort(result.begin(), result.end(), sortBetaCarotene);
-    else if(nutrition == "betaCryptoxanthin")
+    else if(nutrition == "Beta Cryptoxanthin")
         sort(result.begin(), result.end(), sortBetaCryptoxanthin);
-    else if(nutrition == "carbohydrate")
+    else if(nutrition == "Carbohydrate")
         sort(result.begin(), result.end(), sortCarbohydrate);
-    else if(nutrition == "cholesterol")
+    else if(nutrition == "Cholesterol")
         sort(result.begin(), result.end(), sortCholesterol);
-    else if(nutrition == "choline")
+    else if(nutrition == "Choline")
         sort(result.begin(), result.end(), sortCholine);
-    else if(nutrition == "fiber")
+    else if(nutrition == "Fiber")
         sort(result.begin(), result.end(), sortFiber);
-    else if(nutrition == "luteinZeaxanthin")
+    else if(nutrition == "Lutein and Zeaxanthin")
         sort(result.begin(), result.end(), sortLuteinZeaxanthin);
-    else if(nutrition == "lycopene")
+    else if(nutrition == "Lycopene")
         sort(result.begin(), result.end(), sortLycopene);
-    else if(nutrition == "niacin")
+    else if(nutrition == "Niacin")
         sort(result.begin(), result.end(), sortNiacin);
-    else if(nutrition == "protein")
+    else if(nutrition == "Protein")
         sort(result.begin(), result.end(), sortProtein);
-    else if(nutrition == "retinol")
+    else if(nutrition == "Retinol")
         sort(result.begin(), result.end(), sortRetinol);
-    else if(nutrition == "riboflavin")
+    else if(nutrition == "Riboflavin")
         sort(result.begin(), result.end(), sortRiboflavin);
-    else if(nutrition == "selenium")
+    else if(nutrition == "Selenium")
         sort(result.begin(), result.end(), sortSelenium);
-    else if(nutrition == "sugarTotal")
+    else if(nutrition == "Sugar Total")
         sort(result.begin(), result.end(), sortSugarTotal);
-    else if(nutrition == "thiamin")
+    else if(nutrition == "Thiamin")
         sort(result.begin(), result.end(), sortThiamin);
-    else if(nutrition == "water")
+    else if(nutrition == "Water")
         sort(result.begin(), result.end(), sortWater);
-    else if(nutrition == "monoFat")
+    else if(nutrition == "Monosaturated Fat")
         sort(result.begin(), result.end(), sortMonoFat);
-    else if(nutrition == "polyFat")
+    else if(nutrition == "Polysaturated Fat")
         sort(result.begin(), result.end(), sortPolyFat);
-    else if(nutrition == "satFat")
+    else if(nutrition == "Saturated Fat")
         sort(result.begin(), result.end(), sortSatFat);
-    else if(nutrition == "totalFat")
+    else if(nutrition == "Total Lipid")
         sort(result.begin(), result.end(), sortTotalFat);
-    else if(nutrition == "calcium")
+    else if(nutrition == "Calcium")
         sort(result.begin(), result.end(), sortCalcium);
-    else if(nutrition == "copper")
+    else if(nutrition == "Copper")
         sort(result.begin(), result.end(), sortCopper);
-    else if(nutrition == "iron")
+    else if(nutrition == "Iron")
         sort(result.begin(), result.end(), sortIron);
-    else if(nutrition == "magnesium")
+    else if(nutrition == "Magnesium")
         sort(result.begin(), result.end(), sortMagnesium);
-    else if(nutrition == "phosphorus")
+    else if(nutrition == "Phosphorus")
         sort(result.begin(), result.end(), sortPhosphorus);
-    else if(nutrition == "potassium")
+    else if(nutrition == "Potassium")
         sort(result.begin(), result.end(), sortPotassium);
-    else if(nutrition == "sodium")
+    else if(nutrition == "Sodium")
         sort(result.begin(), result.end(), sortSodium);
-    else if(nutrition == "zinc")
+    else if(nutrition == "Zinc")
         sort(result.begin(), result.end(), sortZinc);
-    else if(nutrition == "vitARAE")
+    else if(nutrition == "Vitamin A - RAE")
         sort(result.begin(), result.end(), sortVitARAE);
-    else if(nutrition == "vitB12")
+    else if(nutrition == "Vitamin B12")
         sort(result.begin(), result.end(), sortVitB12);
-    else if(nutrition == "vitB6")
+    else if(nutrition == "Vitamin B6")
         sort(result.begin(), result.end(), sortVitB6);
-    else if(nutrition == "vitC")
+    else if(nutrition == "Vitamin C")
         sort(result.begin(), result.end(), sortVitC);
-    else if(nutrition == "vitE")
+    else if(nutrition == "Vitamin E")
         sort(result.begin(), result.end(), sortVitE);
-    else if(nutrition == "vitK")
+    else if(nutrition == "Vitamin K")
         sort(result.begin(), result.end(), sortVitK);
-    return;
 }
 
 
@@ -144,38 +145,38 @@ void FoodFinder::sortNutrient(std::vector<Food>& result, std::string nutrition)
 
 std::vector<Food> FoodFinder::searchMap(std::string category)
 {
-    return map.search(category);
+    return map.search(std::move(category));
 }
 
-std::vector<Food> FoodFinder::searchTree(std::string category)
+std::vector<Food> FoodFinder::searchTree(const std::string& category)
 {
     return tree.search(category);
 }
 
 
-std::vector<Food> FoodFinder::searchMapNutrientDesc(std::string category, std::string nutrition)
+std::vector<Food> FoodFinder::searchMapNutrientDesc(std::string category, const std::string& nutrition)
 {
-    std::vector<Food> result = map.search(category);
+    std::vector<Food> result = map.search(std::move(category));
     FoodFinder::sortNutrient(result, nutrition);
     return result;
 }
 
-std::vector<Food> FoodFinder::searchMapNutrientAsc(std::string category, std::string nutrition)
+std::vector<Food> FoodFinder::searchMapNutrientAsc(std::string category, const std::string& nutrition)
 {
-    std::vector<Food> result = searchMapNutrientDesc(category, nutrition);
+    std::vector<Food> result = searchMapNutrientDesc(std::move(category), nutrition);
     reverse(result.begin(), result.end());
     return result;
 }
 
 
-std::vector<Food> FoodFinder::searchTreeNutrientDesc(std::string category, std::string nutrition)
+std::vector<Food> FoodFinder::searchTreeNutrientDesc(const std::string& category, const std::string& nutrition)
 {
     std::vector<Food> result = tree.search(category);
     FoodFinder::sortNutrient(result, nutrition);
     return result;
 }
 
-std::vector<Food> FoodFinder::searchTreeNutrientAsc(std::string category, std::string nutrition)
+std::vector<Food> FoodFinder::searchTreeNutrientAsc(const std::string& category, const std::string& nutrition)
 {
     std::vector<Food> result = searchTreeNutrientDesc(category, nutrition);
     reverse(result.begin(), result.end());
