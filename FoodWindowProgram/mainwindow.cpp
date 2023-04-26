@@ -31,11 +31,12 @@ MainWindow::MainWindow(QWidget *parent)
             ui->sortByDropDown->addItem(QString::fromStdString(category));
     }
 
+    std::vector<std::string> catUnits = {"", "", " (mcg)", " (mcg)", " (mcg)", " (g)", " (mg)", " (mg)", " (g)", " (mcg)", " (mcg)", " (mg)", " (g)", " (mcg)", " (mg)", " (mcg)", " (g)", " (mg)", " (g)", " (g)", " (g)", " (g)", " (g)", " (mg)", " (mg)", " (mg)", " (mg)", " (mg)", " (mg)", " (mg)", " (mg)", " (mcg)", " (mcg)", " (mg)", " (mg)", " (mg)", " (mcg)"};
     // Set up table view
     m_tableModel->setColumnCount(categories.size());
     QStringList headerLabels;
-    for (const auto& category : categories) {
-        headerLabels.append(QString::fromStdString(category));
+    for (int i = 0; i < categories.size(); i++) {
+        headerLabels.append(QString::fromStdString(categories[i] + catUnits[i]));
     }
     m_tableModel->setHorizontalHeaderLabels(headerLabels);
 }
