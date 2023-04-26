@@ -5,7 +5,6 @@
 
 FoodFinder::FoodFinder(const std::string& filename)
 {
-    this->map = map;
     std::string fileName = "food.csv"; // File name
     std::vector<Food> foods = loadFromFile(filename); // vector to hold all Food instances
 
