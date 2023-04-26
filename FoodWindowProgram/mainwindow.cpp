@@ -27,7 +27,8 @@ MainWindow::MainWindow(QWidget *parent)
         ui->selectCategoryDropDown->addItem(QString::fromStdString(key));
     }
     for (const std::string& category : categories) {
-        ui->sortByDropDown->addItem(QString::fromStdString(category));
+        if (category != "Description")
+            ui->sortByDropDown->addItem(QString::fromStdString(category));
     }
 
     // Set up table view
@@ -122,7 +123,7 @@ void MainWindow::on_searchButton_clicked()
     std::chrono::high_resolution_clock::time_point start, stop;
 
     if (ui->usingDS->currentText().toStdString() == "RB Tree"){
-        if (ui->sortByAscending->currentIndex() == 1){
+        if (ui->sortByAscending->currentIndex() == 0){
             start = std::chrono::high_resolution_clock::now();
             sortedVector = m_foodFinder.searchTreeNutrientAsc(sortCategory, sortByKey);
             stop = std::chrono::high_resolution_clock::now();
@@ -134,7 +135,7 @@ void MainWindow::on_searchButton_clicked()
         }
     }
     else {
-        if (ui->sortByAscending->currentIndex() == 1){
+        if (ui->sortByAscending->currentIndex() == 0){
             start = std::chrono::high_resolution_clock::now();
             sortedVector = m_foodFinder.searchMapNutrientAsc(sortCategory, sortByKey);
             stop = std::chrono::high_resolution_clock::now();

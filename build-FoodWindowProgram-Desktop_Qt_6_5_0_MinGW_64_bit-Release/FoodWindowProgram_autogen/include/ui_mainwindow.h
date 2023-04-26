@@ -248,6 +248,15 @@ public:
 
         foodTable = new QTableView(centralwidget);
         foodTable->setObjectName("foodTable");
+        foodTable->setToolTipDuration(-1);
+        foodTable->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+        foodTable->setDragEnabled(true);
+        foodTable->setDragDropMode(QAbstractItemView::DragDrop);
+        foodTable->setDefaultDropAction(Qt::MoveAction);
+        foodTable->setSortingEnabled(false);
+        foodTable->setWordWrap(false);
+        foodTable->horizontalHeader()->setCascadingSectionResizes(true);
+        foodTable->verticalHeader()->setCascadingSectionResizes(false);
 
         verticalLayout_5->addWidget(foodTable);
 
